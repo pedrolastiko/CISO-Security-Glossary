@@ -1,7 +1,8 @@
 # Cybersecurity Glossary
 
 > An interactive, comprehensive glossary of **230+ cybersecurity terms**
-> and **580+ enterprise technologies** organized by **NIST CSF 2.0** framework
+> and **580+ enterprise technologies** organized by the **NIST CSF 2.0** framework
+> and cross-mapped to the three lenses of the **NIST IR 8596 Cyber AI Profile**,
 > for security professionals, CISOs, and CSOs.
 
 ## 📖 What is This?
@@ -9,6 +10,9 @@
 **Cybersecurity Glossary** is a living reference guide aligned with the **NIST Cybersecurity Framework (CSF) 2.0**
 that helps security leaders understand modern cybersecurity terminology, trends, and the technologies
 that address each security need across the six core functions: Govern, Identify, Protect, Detect, Respond, and Recover.
+
+Every term additionally carries its **NIST IR 8596 (Cyber AI Profile)** lenses — **Secure**, **Defend**, **Thwart** —
+so the same catalogue can be read either as a control landscape or as an AI-risk landscape.
 
 Unlike traditional documentation or vendor marketing materials, this glossary is:
 
@@ -127,6 +131,57 @@ Each term is positioned in one of three maturity stages:
 - 📈 **Trending**: Zero Trust, Cloud-Native Security, AI for Security, Digital Sovereignty, Sovereign Cloud, SecNumCloud, Data Sovereignty, DSPM, SSPM, CIEM, AI TRiSM, AI Gateway, Detection-as-Code, Hybrid PQC TLS, AiTM Phishing, SLSA
 - ✅ **Mature**: EDR, MFA, DRP, PAM, CLOUD Act, eIDAS, SASE, SSE, ZTNA, CASB, SWG, MDR, Threat Hunting, IEC 62443, IaC Security
 
+## 🧭 NIST IR 8596 — Cyber AI Profile Lenses
+
+Beyond its CSF 2.0 function, **every one of the 230 terms** is tagged with one or more of the three
+lenses of the [NIST IR 8596 Cyber AI Profile](https://csrc.nist.gov/pubs/ir/8596/iprd)
+(*Cybersecurity Framework Profile for Artificial Intelligence*, preliminary draft, December 2025).
+
+| Lens | Full title | What it covers |
+|------|-----------|----------------|
+| 🔒 **Secure** | Securing AI System Components | Protecting the models, datasets, prompts, inference environments, AI APIs, infrastructure and third-party AI services that make up an AI system — and extending existing controls to cover them |
+| 🛡️ **Defend** | Conducting AI-Enabled Cyber Defense | Using AI to strengthen cyber defense: detection, triage, investigation, hunting and response — including securing the AI that does the defending |
+| ⚔️ **Thwart** | Thwarting AI-Enabled Cyber Attacks | Blunting attacks that AI makes faster, cheaper, more scalable or more convincing — AI-written phishing, deepfake social engineering, machine-speed exploitation and lateral movement |
+
+### Assignment rules
+
+The lenses are **not mutually exclusive** — the NIST focus areas overlap by design, and a control can
+be relevant under more than one. Every term carries **at least one** lens; a term is tagged:
+
+- 🔒 **Secure** when it protects or governs AI system components directly (e.g. *Prompt Injection Defense*,
+  *AI-BOM*), **or** when it is a general control whose scope must extend to AI systems as assets
+  (e.g. *KMS*, *SBOM/SCA*, *Data Sovereignty*).
+- 🛡️ **Defend** when AI/ML materially performs or augments the defensive work (e.g. *Agentic SOC*,
+  *Identity Analytics*), or when it supplies the data foundation AI-enabled defense depends on
+  (e.g. *OCSF*, *Security Data Pipeline*).
+- ⚔️ **Thwart** when it degrades an attack technique that AI amplifies (e.g. *Phishing resistant
+  authentication* against AI-generated phishing, *Help-desk Social Engineering* against voice cloning,
+  *Immutable backups* against AI-accelerated ransomware).
+
+### Distribution
+
+| Lens | Terms | Share |
+|------|-------|-------|
+| 🔒 Secure | 160 | 70% |
+| ⚔️ Thwart | 106 | 46% |
+| 🛡️ Defend | 59 | 26% |
+
+| Combination | Terms |
+|-------------|-------|
+| 🔒 Secure only | 104 |
+| 🔒 Secure + ⚔️ Thwart | 44 |
+| 🛡️ Defend + ⚔️ Thwart | 39 |
+| ⚔️ Thwart only | 23 |
+| 🔒 Secure + 🛡️ Defend | 12 |
+| 🛡️ Defend only | 8 |
+
+Totals exceed 230 because terms can carry multiple lenses (325 tags across 230 terms, 1.41 average).
+
+> **Note on sourcing**: NIST IR 8596 is a *preliminary* draft open for comment, so lens definitions
+> and mappings may shift in the Initial Public Draft. The lens scopes above were derived from NIST
+> and NCCoE publication summaries rather than the PDF itself. Assignments are an editorial reading of
+> each term against the three focus areas, not an official NIST mapping.
+
 ## ✨ Features
 
 ### 🔍 Advanced Search
@@ -138,7 +193,8 @@ Each term is positioned in one of three maturity stages:
 ### 🎯 Smart Filtering
 - **Filter by Category**: Focus on specific security functions
 - **Filter by Maturity**: See only emerging/trending/mature solutions
-- **Combined Filters**: Search within a specific category AND maturity level
+- **Filter by NIST IR 8596 lens**: Isolate Secure / Defend / Thwart
+- **Combined Filters**: Stack category, maturity and lens filters together
 
 ### 💾 Interactive Details
 - Click any term to view full details
@@ -187,22 +243,22 @@ javascript:window.open('path/to/index.html', '_blank');
 This glossary includes a dedicated cluster of **14 terms** covering the fast-growing **Digital Sovereignty** domain,
 reflecting the strategic priority of data control, regulatory independence, and technological autonomy for nations and enterprises:
 
-| Term | Category | Maturity |
-|------|----------|----------|
-| Digital Sovereignty | Govern | 📈 Trending |
-| Data Sovereignty | Govern | 📈 Trending |
-| Sovereign Cloud | Govern | 📈 Trending |
-| Sovereign AI | Govern | 🚀 Emerging |
-| GAIA-X | Govern | 🚀 Emerging |
-| EUCS (EU Cloud Cybersecurity Certification) | Govern | 🚀 Emerging |
-| SecNumCloud | Govern | 📈 Trending |
-| CLOUD Act | Govern | ✅ Mature |
-| Data Act (EU) | Govern | 📈 Trending |
-| Data Localization | Govern | 📈 Trending |
-| Data Transfer Impact Assessment (DTIA) | Govern | 📈 Trending |
-| Digital Markets Act (DMA) | Govern | 📈 Trending |
-| EUDI Wallet (EU Digital Identity Wallet) | Protect | 🚀 Emerging |
-| Technological Independence | Govern | 📈 Trending |
+| Term | Category | Maturity | IR 8596 Lens |
+|------|----------|----------|--------------|
+| Digital Sovereignty | Govern | 📈 Trending | 🔒 |
+| Data Sovereignty | Govern | 📈 Trending | 🔒 |
+| Sovereign Cloud | Govern | 📈 Trending | 🔒 |
+| Sovereign AI | Govern | 🚀 Emerging | 🔒 |
+| GAIA-X | Govern | 🚀 Emerging | 🔒 |
+| EUCS (EU Cloud Cybersecurity Certification) | Govern | 🚀 Emerging | 🔒 |
+| SecNumCloud | Govern | 📈 Trending | 🔒 |
+| CLOUD Act | Govern | ✅ Mature | 🔒 |
+| Data Act (EU) | Govern | 📈 Trending | 🔒 |
+| Data Localization | Govern | 📈 Trending | 🔒 |
+| Data Transfer Impact Assessment (DTIA) | Govern | 📈 Trending | 🔒 |
+| Digital Markets Act (DMA) | Govern | 📈 Trending | 🔒 |
+| EUDI Wallet (EU Digital Identity Wallet) | Protect | 🚀 Emerging | 🔒 ⚔️ |
+| Technological Independence | Govern | 📈 Trending | 🔒 |
 
 ---
 
@@ -215,111 +271,111 @@ organized into seven thematic clusters.
 
 Autonomous agents move AI from generating text to taking actions, creating a new control plane.
 
-| Term | Category | Maturity |
-|------|----------|----------|
-| Agentic AI Security | Protect | 🚀 Emerging |
-| AI TRiSM (AI Trust, Risk & Security Mgt) | Govern | 📈 Trending |
-| Prompt Injection Defense | Protect | 🚀 Emerging |
-| AI Gateway / LLM Firewall | Protect | 📈 Trending |
-| MCP Security (Model Context Protocol) | Protect | 🚀 Emerging |
-| Shadow AI Discovery | Identify | 📈 Trending |
-| AI-BOM (AI Bill of Materials) | Identify | 🚀 Emerging |
-| RAG & Vector Database Security | Protect | 🚀 Emerging |
-| AI Guardrails & Output Filtering | Protect | 📈 Trending |
-| Agent Identity & Delegation | Protect | 🚀 Emerging |
-| Confidential AI (TEE for GPU) | Protect | 🚀 Emerging |
-| AI Content Provenance (C2PA) | Detect | 🚀 Emerging |
+| Term | Category | Maturity | IR 8596 Lens |
+|------|----------|----------|--------------|
+| Agentic AI Security | Protect | 🚀 Emerging | 🔒 |
+| AI TRiSM (AI Trust, Risk & Security Mgt) | Govern | 📈 Trending | 🔒 |
+| Prompt Injection Defense | Protect | 🚀 Emerging | 🔒 |
+| AI Gateway / LLM Firewall | Protect | 📈 Trending | 🔒 |
+| MCP Security (Model Context Protocol) | Protect | 🚀 Emerging | 🔒 |
+| Shadow AI Discovery | Identify | 📈 Trending | 🔒 |
+| AI-BOM (AI Bill of Materials) | Identify | 🚀 Emerging | 🔒 |
+| RAG & Vector Database Security | Protect | 🚀 Emerging | 🔒 |
+| AI Guardrails & Output Filtering | Protect | 📈 Trending | 🔒 |
+| Agent Identity & Delegation | Protect | 🚀 Emerging | 🔒 |
+| Confidential AI (TEE for GPU) | Protect | 🚀 Emerging | 🔒 |
+| AI Content Provenance (C2PA) | Detect | 🚀 Emerging | 🔒 ⚔️ |
 
 ### 🌐 Modern Access & Edge (8 terms)
 
 The convergence of network and security into cloud-delivered platforms, replacing perimeter architectures.
 
-| Term | Category | Maturity |
-|------|----------|----------|
-| SASE (Secure Access Service Edge) | Protect | ✅ Mature |
-| SSE (Security Service Edge) | Protect | ✅ Mature |
-| ZTNA (Zero Trust Network Access) | Protect | ✅ Mature |
-| CASB (Cloud Access Security Broker) | Protect | ✅ Mature |
-| SWG (Secure Web Gateway) | Protect | ✅ Mature |
-| Secure Enterprise Browser | Protect | 📈 Trending |
-| Email Security & DMARC/BIMI | Protect | ✅ Mature |
-| Universal ZTNA (IT/OT/IoT) | Protect | 🚀 Emerging |
+| Term | Category | Maturity | IR 8596 Lens |
+|------|----------|----------|--------------|
+| SASE (Secure Access Service Edge) | Protect | ✅ Mature | 🔒 ⚔️ |
+| SSE (Security Service Edge) | Protect | ✅ Mature | 🔒 ⚔️ |
+| ZTNA (Zero Trust Network Access) | Protect | ✅ Mature | 🔒 ⚔️ |
+| CASB (Cloud Access Security Broker) | Protect | ✅ Mature | 🔒 |
+| SWG (Secure Web Gateway) | Protect | ✅ Mature | 🔒 ⚔️ |
+| Secure Enterprise Browser | Protect | 📈 Trending | 🔒 ⚔️ |
+| Email Security & DMARC/BIMI | Protect | ✅ Mature | 🛡️ ⚔️ |
+| Universal ZTNA (IT/OT/IoT) | Protect | 🚀 Emerging | 🔒 ⚔️ |
 
 ### ☁️ Cloud & Data Posture (9 terms)
 
 The posture management family that extends CNAPP across data, SaaS, identity and entitlements.
 
-| Term | Category | Maturity |
-|------|----------|----------|
-| DSPM (Data Security Posture Management) | Identify | 📈 Trending |
-| SSPM (SaaS Security Posture Management) | Identify | 📈 Trending |
-| CIEM (Cloud Infrastructure Entitlement Mgt) | Protect | 📈 Trending |
-| KSPM (Kubernetes Security Posture Mgt) | Identify | 📈 Trending |
-| ISPM (Identity Security Posture Management) | Identify | 📈 Trending |
-| CDR (Cloud Detection & Response) | Detect | 🚀 Emerging |
-| eBPF Runtime Security | Detect | 📈 Trending |
-| IaC Security & Policy-as-Code | Protect | ✅ Mature |
-| Workload Identity Federation (SPIFFE) | Protect | 📈 Trending |
+| Term | Category | Maturity | IR 8596 Lens |
+|------|----------|----------|--------------|
+| DSPM (Data Security Posture Management) | Identify | 📈 Trending | 🔒 |
+| SSPM (SaaS Security Posture Management) | Identify | 📈 Trending | 🔒 |
+| CIEM (Cloud Infrastructure Entitlement Mgt) | Protect | 📈 Trending | 🔒 ⚔️ |
+| KSPM (Kubernetes Security Posture Mgt) | Identify | 📈 Trending | 🔒 |
+| ISPM (Identity Security Posture Management) | Identify | 📈 Trending | 🔒 ⚔️ |
+| CDR (Cloud Detection & Response) | Detect | 🚀 Emerging | 🔒 🛡️ |
+| eBPF Runtime Security | Detect | 📈 Trending | 🔒 🛡️ |
+| IaC Security & Policy-as-Code | Protect | ✅ Mature | 🔒 |
+| Workload Identity Federation (SPIFFE) | Protect | 📈 Trending | 🔒 ⚔️ |
 
 ### ⚡ Autonomous SOC & Security Data (7 terms)
 
 AI agents and data engineering reshaping how detection and response are operated.
 
-| Term | Category | Maturity |
-|------|----------|----------|
-| Agentic SOC (Autonomous SOC) | Detect | 🚀 Emerging |
-| Detection-as-Code | Detect | 📈 Trending |
-| Security Data Pipeline | Detect | 📈 Trending |
-| OCSF (Open Cybersecurity Schema Framework) | Detect | 📈 Trending |
-| MDR (Managed Detection & Response) | Detect | ✅ Mature |
-| Threat Hunting | Detect | ✅ Mature |
-| Adversarial Exposure Validation (AEV) | Identify | 🚀 Emerging |
+| Term | Category | Maturity | IR 8596 Lens |
+|------|----------|----------|--------------|
+| Agentic SOC (Autonomous SOC) | Detect | 🚀 Emerging | 🔒 🛡️ |
+| Detection-as-Code | Detect | 📈 Trending | 🛡️ |
+| Security Data Pipeline | Detect | 📈 Trending | 🛡️ |
+| OCSF (Open Cybersecurity Schema Framework) | Detect | 📈 Trending | 🛡️ |
+| MDR (Managed Detection & Response) | Detect | ✅ Mature | 🛡️ ⚔️ |
+| Threat Hunting | Detect | ✅ Mature | 🛡️ ⚔️ |
+| Adversarial Exposure Validation (AEV) | Identify | 🚀 Emerging | 🛡️ ⚔️ |
 
 ### 🔐 Operational Post-Quantum (5 terms)
 
 Moving from awareness of quantum risk to an executable migration programme.
 
-| Term | Category | Maturity |
-|------|----------|----------|
-| CBOM (Cryptographic Bill of Materials) | Identify | 🚀 Emerging |
-| Harvest Now, Decrypt Later (HNDL) | Identify | 📈 Trending |
-| PQC Migration Roadmap | Govern | 📈 Trending |
-| Hybrid PQC TLS (ML-KEM) | Protect | 📈 Trending |
-| QKD (Quantum Key Distribution) | Protect | 🚀 Emerging |
+| Term | Category | Maturity | IR 8596 Lens |
+|------|----------|----------|--------------|
+| CBOM (Cryptographic Bill of Materials) | Identify | 🚀 Emerging | 🔒 |
+| Harvest Now, Decrypt Later (HNDL) | Identify | 📈 Trending | 🔒 |
+| PQC Migration Roadmap | Govern | 📈 Trending | 🔒 |
+| Hybrid PQC TLS (ML-KEM) | Protect | 📈 Trending | 🔒 |
+| QKD (Quantum Key Distribution) | Protect | 🚀 Emerging | 🔒 |
 
 ### 🎯 Modern Threat Landscape (7 terms)
 
 Adversary tradecraft and criminal economics, described as attacker behaviour rather than defensive controls.
 
-| Term | Category | Maturity |
-|------|----------|----------|
-| RaaS & Double Extortion | Identify | ✅ Mature |
-| AiTM Phishing (MFA bypass) | Detect | 📈 Trending |
-| Infostealer & Credential Marketplaces | Detect | 📈 Trending |
-| Initial Access Broker (IAB) | Identify | 📈 Trending |
-| Living-off-the-Land & Pre-positioning | Detect | 📈 Trending |
-| Help-desk Social Engineering | Protect | 📈 Trending |
-| Hybrid Threats & Hacktivism | Govern | 📈 Trending |
+| Term | Category | Maturity | IR 8596 Lens |
+|------|----------|----------|--------------|
+| RaaS & Double Extortion | Identify | ✅ Mature | 🛡️ ⚔️ |
+| AiTM Phishing (MFA bypass) | Detect | 📈 Trending | 🛡️ ⚔️ |
+| Infostealer & Credential Marketplaces | Detect | 📈 Trending | 🛡️ ⚔️ |
+| Initial Access Broker (IAB) | Identify | 📈 Trending | 🛡️ ⚔️ |
+| Living-off-the-Land & Pre-positioning | Detect | 📈 Trending | 🛡️ ⚔️ |
+| Help-desk Social Engineering | Protect | 📈 Trending | ⚔️ |
+| Hybrid Threats & Hacktivism | Govern | 📈 Trending | 🛡️ ⚔️ |
 
 ### 🧬 Attested Supply Chain, CPS & 2026 Regulation (13 terms)
 
 Verifiable software provenance, cyber-physical systems, and the regulatory wave landing in 2026.
 
-| Term | Category | Maturity |
-|------|----------|----------|
-| SLSA Framework | Protect | 📈 Trending |
-| Sigstore & Artifact Signing | Protect | 📈 Trending |
-| Build Provenance & in-toto Attestations | Protect | 📈 Trending |
-| VEX (Vulnerability Exploitability eXchange) | Identify | 📈 Trending |
-| IEC 62443 | Govern | ✅ Mature |
-| CPS Protection Platform | Protect | 📈 Trending |
-| SDV & UN R155 (Automotive) | Govern | 📈 Trending |
-| Medical Device Security | Protect | 📈 Trending |
-| Space Cybersecurity | Protect | 🚀 Emerging |
-| NIS2 Transposition | Govern | 📈 Trending |
-| Cyber Solidarity Act | Govern | 🚀 Emerging |
-| CMMC 2.0 | Govern | 📈 Trending |
-| Cyber Insurance & Insurability | Govern | 📈 Trending |
+| Term | Category | Maturity | IR 8596 Lens |
+|------|----------|----------|--------------|
+| SLSA Framework | Protect | 📈 Trending | 🔒 |
+| Sigstore & Artifact Signing | Protect | 📈 Trending | 🔒 |
+| Build Provenance & in-toto Attestations | Protect | 📈 Trending | 🔒 |
+| VEX (Vulnerability Exploitability eXchange) | Identify | 📈 Trending | 🔒 |
+| IEC 62443 | Govern | ✅ Mature | 🔒 ⚔️ |
+| CPS Protection Platform | Protect | 📈 Trending | 🛡️ ⚔️ |
+| SDV & UN R155 (Automotive) | Govern | 📈 Trending | 🔒 ⚔️ |
+| Medical Device Security | Protect | 📈 Trending | 🔒 ⚔️ |
+| Space Cybersecurity | Protect | 🚀 Emerging | 🔒 ⚔️ |
+| NIS2 Transposition | Govern | 📈 Trending | 🔒 ⚔️ |
+| Cyber Solidarity Act | Govern | 🚀 Emerging | 🛡️ ⚔️ |
+| CMMC 2.0 | Govern | 📈 Trending | 🔒 |
+| Cyber Insurance & Insurability | Govern | 📈 Trending | 🔒 ⚔️ |
 
 ---
 
@@ -335,4 +391,7 @@ Verifiable software provenance, cyber-physical systems, and the regulatory wave 
 | ✅ Mature Terms | 91 |
 | Digital Sovereignty Terms | 14 |
 | 2026 Trending Themes | 61 |
+| 🔒 Secure (IR 8596) | 160 |
+| 🛡️ Defend (IR 8596) | 59 |
+| ⚔️ Thwart (IR 8596) | 106 |
 
